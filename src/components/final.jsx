@@ -1,17 +1,23 @@
 import React from 'react'
 import styled from  "styled-components"
-import v1 from '../assets/v1.svg';
-import v2 from '../assets/v2.svg';
-import v3 from '../assets/v3.svg';
+import ambi from '../assets/ambi.png'
+// import v1 from '../assets/v1.svg';
+// import v2 from '../assets/v2.svg';
+// import v3 from '../assets/v3.svg';
 
 
 const Container=styled.div`
 width: 100%;
-height: 800px;
+height: 100%;
 background: #191A1D;
 
 .main_div{
     display: flex;
+}
+.body{
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 .div1{
    font-size: 80px;
@@ -29,8 +35,9 @@ background: #191A1D;
     margin-left:-15px;
 }
 .v1{
+    height: 400px;
     margin-top: 100px;
-    width: 100px;
+    width: 300px;
     margin-left:200px;
 }
 .v2{
@@ -152,20 +159,33 @@ font-weight: 400;
 line-height: normal;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
+    width: 100%;
+height: 750px;
+background: #191A1D;
     .div1{
-        width: 300px;
+        margin-left: -40px;
+        width: 140px;
     }
     .main_div{
-        margin-top: -100pxh;
+        
+        background-color:#191A1D;
+        width: 100px;
+        margin-right: 0px;
+        margin-top: -280px;
+        margin-left: 120px;
     }
 
     .v1{
-        margin-left: 10px;
+        height: 120px;
+        width: 200px;
+        margin-left: 0px;
+    
     }
+   
     .h1{
         font-size: 40px;
-        margin-left: -350px;
+        margin-left: -50px;
         margin-top: 200px;
     }
     .h3{
@@ -190,20 +210,20 @@ line-height: normal;
     }
     .txt1{
         font-size: 20px;
-        margin-left: -130px;
+        margin-left: -10px;
         margin-top: 349px;
     }
     .txt3{
-        font-size: 30px;
-        margin-left: 0px;
+        font-size: 20px;
+        margin-left: 20px;
         margin-top: 100px;
-        margin-left: 15px;
     }
     .txt4{
-        font-size: 20px;
+        font-style: oblique;
+        font-size: 10px;
         margin-right: 50px;
-        margin-top: 30px;
-        margin-left: 15px;
+        /* margin-top: 30px; */
+        margin-left: 28px;
     }
     .txt5{
         font-size: 15px;
@@ -211,10 +231,22 @@ line-height: normal;
         margin-left: 15px;
     }
     .txt6{
-        font-size: 30px;
-        margin-left: 160px;
-        margin-top: 100px;
+        font-size: 20px;
+        margin-left: 120px;
+        margin-top: 30px;
+        height: 100px;
 
+    }
+    .top{
+        width: 500px;
+    }
+    .div2{
+        width: 500px;
+        margin-top: 150px;
+        margin-left: -200px;
+    }
+    .div22{
+        width:300px;
     }
 }
 
@@ -222,12 +254,13 @@ line-height: normal;
 const Five = () => {
   return (
     <Container>
+        <div className='top'>
         <div className="main_div">
             <div className="div1">
-            <div className="div11"><img className="v1" src={v1} alt=""/></div> 
-            <div className="div12"><img className="v3" src={v3} alt=""/></div>
-            <div className="div13"><img className="v2" src={v2} alt=""/></div>
-            <div className="div14"><svg className='one' xmlns="http://www.w3.org/2000/svg" width="374" height="118" viewBox="0 0 374 118" fill="none">
+            <div className="div11"><img className="v1" src={ambi} alt=""/></div> 
+            {/* <div className="div12"><img className="v3" src={v3} alt=""/></div>
+            <div className="div13"><img className="v2" src={v2} alt=""/></div> */}
+            {/* <div className="div14"><svg className='one' xmlns="http://www.w3.org/2000/svg" width="374" height="118" viewBox="0 0 374 118" fill="none">
 <g filter="url(#filter0_d_167_232)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M369.664 0L3.99951 109.396L105.402 82.0469L186.32 58.6049L300.013 23.442L369.664 0Z" fill="black"/>
 </g>
@@ -243,8 +276,8 @@ const Five = () => {
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_167_232" result="shape"/>
 </filter>
 </defs>
-</svg></div>
-<div className="div15"><svg className='two' xmlns="http://www.w3.org/2000/svg" width="374" height="118" viewBox="0 0 374 118" fill="none">
+</svg></div> */}
+{/* <div className="div15"><svg className='two' xmlns="http://www.w3.org/2000/svg" width="374" height="118" viewBox="0 0 374 118" fill="none">
 <g filter="url(#filter0_d_167_232)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M369.664 0L3.99951 109.396L105.402 82.0469L186.32 58.6049L300.013 23.442L369.664 0Z" fill="black"/>
 </g>
@@ -270,17 +303,18 @@ const Five = () => {
 <path d="M0 50C0 22.3858 22.3858 0 50 0H262C289.614 0 312 22.3858 312 50V64C312 91.6142 289.614 114 262 114H0V50Z" fill="#63E7DA"/>
 </svg></div>
 <div className="div18"><h1 className='txt'>write a message</h1></div>
-<div className="div18"><h1 className='txt1'>send</h1></div>
+<div className="div18"><h1 className='txt1'>send</h1></div> */}
 
             </div>
             <div className="div2">
         <div className="div21"><h1 className='txt3'>Let’s <span className='span'>talk</span> something special.</h1></div>
-<div className="div22"><h1 className='txt4'>We seek to push the limitations of<br/> creativity to create high-engaging, <br/>user-friendly and <br/>memorable interactive experiences.</h1></div>
+<div className="div22"><h1 className='txt4'><p>We seek to push the limitations of creativity to create high-engaging,user-friendly and memorable interactive experiences.</p></h1></div>
         
 <div className="div23"><h1 className='txt5'>vectorux0@gmail.com</h1></div></div>
 
         </div>
         <div className="div100"><h1 className='txt6'>Let’s <span className='span1'>connect</span> there</h1></div>
+        </div>
     </Container>
   )
 }

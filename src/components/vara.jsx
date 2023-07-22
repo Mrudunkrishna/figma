@@ -6,7 +6,7 @@ const Container=styled.div`
 width: 100%;
 height: 600px;
 background: #191A1D;
-
+overflow: hidden;
 
 .maindiv{
 background-color:  #191A1D;
@@ -15,6 +15,11 @@ justify-content: space-between;
 margin-left: 150px;
 margin-right: 150px;
 margin-top: 120px;
+}
+.body{
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 .one, .two,.three{
     height: 200px;
@@ -77,37 +82,57 @@ line-height: normal;
 
 
 @media (max-width: 600px) {
+  width: 100%;
+height: 600px;
+background: #191A1D;
     /* Add your media query styles here */
     .maindiv {
+      background-color:  #191A1D;
+      width: 80px;
+      height: 80px;
       margin-left: 50px;
       margin-right: 100px;
       margin-top: 80px;
     }
-    
-
+   
     .h2 {
-      font-size: 60px;
+      margin-top: -80px;
+      font-size: 20px;
     }
     .one,
     .two,
-    .three,
-    .text1,
-    .text2,
-    .text3 
+    .three 
      {
+      margin-left: -40px;
         font-size: 30px;
       /* Add your styles here */
       /* Example styles */
-      height: 150px;
+      height: 100px;
       width: 150px;
       text-align: center;
     }
+    .text1,
+    .text2,
+    .text3{
+      margin-top: 20px;
+      margin-left: -20px;
+        font-size: 40px;
+      /* Add your styles here */
+      /* Example styles */
+      height: 100px;
+      width: 100px;
+      text-align: center;
+    }
     .maindiv1 {
+      width: 300px;
+      margin-left: 40px;
+      background-color: #191A1D;
       margin-top: 30px;
+      justify-content: space-between;
     }
 
     .h22 {
-      font-size: 18px;
+      font-size: 20px;
     }
 
     #h {
@@ -115,7 +140,7 @@ line-height: normal;
     }
 
     .h3 {
-      font-size: 14px;
+      font-size: 15px;
     }
   }
  

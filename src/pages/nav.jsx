@@ -7,7 +7,8 @@ import Cmptr from '../components/cmptr';
 import Vara from '../components/vara';
 import Final from '../components/final';
 const Container=styled.div`
-
+overflow: hidden;
+ 
 `;
 
 export const nav = () => {

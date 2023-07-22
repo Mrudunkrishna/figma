@@ -1,134 +1,158 @@
 import React from 'react'
-import styled from 'styled-components'
-import pica from '../assets/pica.png'
+import styled from  "styled-components"
+import pica from '../assets/pica.png';
 
-const Container = styled.div`
-  width: 100px;
-  background-color: #191A1D;
-
-  .main {
-    width: 1835px;
-    height: 720px;
-    position: relative;
-    text-align: center;
-  }
-
-  .pic {
+const Container=styled.div`
+width: 100%;
+    /* background: #262625; */
+    background-color: rgb(25, 26, 29);
+    /* background: #262729; */
+    
+.span1{
+    color: #63E7DA;
+    font-family: Staatliches;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.h1{
+    color: #FFF;
+    font-family: Staatliches;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top:100px;
+    transform: translate(-50%,-50%);
+    margin-left: 100px;
+}
+.pic{
     width: 100%;
-    height: 600px;
-    position: relative;
-  }
+    height:600px ;
+    /* position:relative; */
+    margin-left:0px;
+    margin-top: -420px;
 
-  .text {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-  }
+}
+.main{
+    /* position: relative; */
+    text-align: center;
+/* display: flex */
 
-  .h2 {
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 70px;
-    font-style: italic;
-    font-weight: 300;
-    line-height: normal;
-  }
 
-  .span1 {
-    color: aqua;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 70px;
-    font-style: italic;
-    font-weight: 300;
-    line-height: normal;
-  }
+}
+.txt{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin-left: 200px;
+    margin-top:290px;
+    
+}
+.h2{
+    color: #FFF;
+    font-family: Merienda;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 400;
+    transform: translate(-50%,-50%);
+    margin-left: 100px;
 
-  .h4 {
+}
+.span2{
+    color: #63E7DA;
+    font-family: Merienda;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 400;
+}
+.span3{
+    font-family: Merienda;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 400;
+}
+.txt1{  
     margin-top: -70px;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
-    font-style: italic;
-    font-weight: 300;
-    line-height: normal;
-  }
-
-  .span2 {
-    color: aqua;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
-    font-style: italic;
-    font-weight: 300;
-    line-height: normal;
-  }
-
-
-
-
-
-  @media (max-width: 768px) {
-    /* Add your media query styles here */
-    width: 439px;
-    padding: 20px;
-
-    .main {
-      width: 100%;
-      height: auto;
-      text-align: center;
+}
+@media screen and (max-width: 600px) {
+    background-color: rgb(25, 26, 29);
+    width: 100%;
+/* margin-top: -100px; */
+.txt .h1{
+    font-size: 35px;
+    margin-top: -150px;
+    margin-left:0px;
+}  
+    .txt .span1{
+        font-size: 35px;
     }
-
-    .text {
-      margin-left: -120px;
-      margin-top: -150px;
-      left: 50%;
-      transform: translateX(-50%);
+    .pic {
+        width: 100%;
+      height: 410px;
+      margin-left: 0px;
+      margin-top: -230px;
+      
     }
-
+    .txt1{
+        margin-top:-40px;
+        margin-left: 100px;
+    }
+    .txt .h2{
+        font-size: 15px;
+        margin-top: 35px;
+    }
+    .txt1 .span2{
+        font-size: 17px;
+    }
+    .main{
+        font-size: 10px;
+    font-weight: 200;
+    /* margin: 0vh 0px 0px 4vh; */
+    }
+}
+  @media screen and (max-width: 768px) {
+    
+        .h1 {
+      font-size: 55px;
+    }
     .pic {
       height: 400px;
     }
-
-    .h2 {
-      font-size: 40px;
+    .txt1{
+        margin-top:-50px;
     }
-
-    .span1 {
-      font-size: 40px;
+    .h2{
+        font-size: 24px;
+        margin-left: -100px;
     }
-
-    .h4 {
-      margin-left: 50px;
-      margin-top: -40px;
-      font-size: 12px;
+    .span1{
+        font-size: 55px;
     }
-
-    .span2 {
-      font-size: 12px;
-    }
+   .txt{
+    margin-left: 110px;
+   }
   }
 `;
-
-  
-
-
-
-
-
-
-
-export const header = () => {
+const First = () => {
   return (
-   <Container>
-    <div className="main">
-      <img className="pic" src={pica} alt=""/>
-      <div className="text">
-        <h2 className='h2'>VECTOR<span className='span1'>UX</span></h2>
-        <h4 className='h4'>we ideate, create<span className='span2'> & </span>innovate</h4>
-      </div>
-
-    </div>
-   </Container>
+    <Container>
+        <div className='main'>
+        <div className='txt'>
+        <h1 className='h1'>VECTOR<span className='span1'>UX</span></h1>
+        <div className='txt1'>
+        <h1 className='h2'>we ideate, create <span className='span2'>&</span> innovate</h1>
+        </div>
+        </div>
+        <div className="div2"><img className="pic" src={pica} alt=""/></div>
+        </div>    
+    </Container> 
   )
 }
-export default header
+
+export default First

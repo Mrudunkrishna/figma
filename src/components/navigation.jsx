@@ -4,16 +4,21 @@ import { useState, useEffect } from 'react';
 
 const Container=styled.div`
 width: 100%;
-    background-color: #3C3C3C;
+    background-color: #191A1D;
     padding: 5px;
     position: relative;
-
+    
     .main-nav{
-      background-color:  #3C3C3C;
+      background-color: #191A1D;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+    .body{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
     .link{
       display: flex;
     }
@@ -26,9 +31,15 @@ width: 100%;
       display: none;
     }
     @media screen and (max-width: 700px) {
+      width: 100%;
+      height: 20px;
+    background-color: #191A1D;
+    padding: 5px;
+    position: relative;
       .icon{
         display: flex;
         color: whitesmoke;
+        margin-right: 20px;
       }
       .link{
         display: none;
@@ -36,14 +47,14 @@ width: 100%;
     }
 
     .side_nav{
-      width: 300px;
+      width: 200px;
       height: 100vh;
-      background-color: #0c0c0c;
+     
       position: absolute;
-      top: 0;
+      top: -25;
       left: 0;
       transform: translateX(${props => props.value?"-300px":"0px"});
-      transition: all 1.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
       z-index: 1;
     }
     .logo_side{
@@ -53,7 +64,7 @@ width: 100%;
     }
     .side1{
       color: white;
-
+padding: 10px;
     }
 `;
 export const navigation = () => {

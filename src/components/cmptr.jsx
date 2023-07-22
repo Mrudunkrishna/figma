@@ -7,11 +7,17 @@ const Container=styled.div`
  width: 100%;
 margin:0;
 padding: 0;
+
 .main_div{
   background: #191A1D;
   margin-bottom:-200px;
   width: 100%;
   height: 250px;
+}
+.body{
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 .lap{
   width: 600px;
@@ -71,11 +77,15 @@ margin-left: 70px;
   } */
 
   @media (max-width: 768px) {
+    width: 100%;
+margin:0;
+padding: 0;
+    
     .lap {
-      width: 300px;
-      height: 400px;
-      margin-top: -200px;
-      margin-left: 200px;
+      width: 200px;
+      height: 220px;
+     margin-left: 180px;
+     margin-top: -120px;
     }
 
     .hr2 {
@@ -83,15 +93,16 @@ margin-left: 70px;
     }
 
     .hr3 {
-      width: 200px;
+      width: 40px;
       margin-left: 150px;
     }
 
     .h1 {
       font-size: 30px;
       margin-top: -100px;
-      margin-left: 50px;
+      margin-left: 30px;
     }
+   
   }
 
 
